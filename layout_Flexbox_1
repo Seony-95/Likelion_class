@@ -31,6 +31,8 @@
             justify-content: space-between;
             /* 부모 기준으로 일단 하나 정렬! */
         }
+        
+         /* 뭉쳐있는 상태를, flex와 column으로 쫙쫙 퍼트리는 개념!! */
 
         .left_side,
         .center,
