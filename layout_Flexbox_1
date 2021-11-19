@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flex</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .green {
+            background:green;
+        }
+
+        .yellow {
+            background: yellow;
+        }
+
+        article {
+            display: flex;
+            background: black;
+            width: 350px;
+            height: 300px;
+            justify-content: space-between;
+            /* 부모 기준으로 일단 하나 정렬! */
+        }
+
+        .left_side,
+        .center,
+        .right_side {
+            display: flex;
+            height: 300px;
+            /* height: 요소들 간 높이 간격  */
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right_side {
+            flex-direction: column-reverse;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <article>
+        <!-- div 구조가 한 줄씩 (block 채워짐) -->
+        <!-- 그래서 상자 각각에 주는 게 아니라,
+        줄 자체에 준다. -->
+        <!-- left_ side 1줄 -->
+        <!-- center 1줄 -->
+        <!-- right_ side 1줄 -->
+        <div class="left_side">
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="center">
+            <div class="blue"></div>
+            <div class="yellow"></div>
+        </div>
+        <div class="right_side">
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+        </div>
+    </article>
+</body>
+
+</html>
